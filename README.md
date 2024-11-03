@@ -54,6 +54,7 @@
   * [超分降噪](#超分降噪)
   * [自动打码](#自动打码)
   * [添加水印](#添加水印)
+  * 
   * [图片筛选](#图片筛选)
   * [抹除数据](#抹除数据)
     * [抹除](#抹除)
@@ -288,6 +289,15 @@ surroundings.yaml  : 场景文件
 
 随机图片的提示词文件在 `files/prompt` 文件夹, 生成过的 *.txt 文件将被移动到 `files/prompt/done`, 勾选 "组织生成后移动提示词文件" 将不会移动.
 
+```
+例如:
+.\files
+  └---\prompt
+        └---可莉.txt -> 文件内容: tianliang duohe fangdongye, loli, klee_(genshin_impact)
+        └---loli.txt -> 文件内容: {{{loli}}}
+        └---114514.txt -> 文件内容: {henghengheng aaaaa}
+```
+
 随机抽取的画风在 `files/favorites/artists.yaml` 文件中, 画风的添加与删除请参照：[添加提示词](#添加提示词) [删除提示词](#删除提示词)
 
 ## Vibe
@@ -470,6 +480,24 @@ NovelAI 的 Enhance 功能, 本质就是图生图, 甚至重绘幅度是固定�
 使用前, 请先准备一些自己的水印到 `files/watermarks` 文件夹.
 
 项目中附带了两个我的水印, 大家可以删除并添加自己的水印.
+
+## 上传Pixiv
+
+![pixiv](https://github.com/zhulinyv/SANP-Document/raw/main/images/pixiv.png?raw=true)
+
+关于上传 Pixiv, 需要将选择上传的图片或文件夹放到同一个文件夹, 例如 `./output/pixiv`
+
+```
+例如:
+.\output
+  └---\pixiv
+        └---7589641258_GenshinImpact_可莉.png -> 注意: 图片的名称为: 种子_出处_角色.png 的形式, 将会根据生成信息以及出处和角色进行打标签, 角色将作为标题
+        └---6594641258dwuibuib_None_None.png  -> 注意: 图片的名称为: 内容_None_None.png 的形式, 将会根据生成信息进行打标签, None 将作为标题
+        └---拉菲.png                          -> 注意: 这样的图片将会导致错误, 不用担心, 如果完全使用本项目生成的图片, 生成的图片名均是符合标准的
+        └---\Nahida                           -> 注意: 可以将文件夹作为图片组, 即上传的一个作品中含有多张图片
+              └---5264942125_GenshinImpact_纳西妲.png
+              └---4351819919_GenshinImpact_纳西妲.png
+```
 
 ## 图片筛选
 
