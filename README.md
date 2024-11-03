@@ -170,7 +170,7 @@ surroundings.yaml  : 场景文件
 
 - 3. 输入名称和选中概率
 
-![else_to_add](https://github.com/zhulinyv/SANP-Document/raw/main/images/else_to_Add.png?raw=true)
+![else_to_add](https://github.com/zhulinyv/SANP-Document/raw/main/images/else_to_add.png?raw=true)
 
 - 4. 当选择某些文件时, 下方的参数为必填项, 请注意.
 
